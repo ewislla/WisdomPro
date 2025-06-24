@@ -9,9 +9,9 @@ export const projects: Project[] = [
     image: '../assets/qcats.png',
     technologies: ['React', 'Web3.js', 'Solidity', 'Framer Motion', 'Tailwind CSS', 'MetaMask'],
     liveUrl:'https://www.qcats.xyz/',
-    codeUrl: 'https://github.com/wisdompro/quantumcat',
+    codeUrl: 'https://github.com/ewislla/Qcat',
     featured: true,
-    category: 'web3'
+    category: 'Memecoin landing page'
    },
   {
     id: 'airflow-dashboard',
