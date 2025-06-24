@@ -57,7 +57,7 @@ const Navigation: React.FC = () => {
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary-500 rounded-full animate-pulse" />
               </div>
               <div className="flex items-center space-x-1">
-                <span className="text-primary-500 font-mono text-lg">&lt;/&gt;</span>
+                <span className="text-primary-500 font-mono text-lg"></span>
                 <span className="text-2xl font-bold text-dark-50">WisdomPro</span>
               </div>
             </motion.div>

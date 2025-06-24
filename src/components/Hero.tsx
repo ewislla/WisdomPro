@@ -52,6 +52,9 @@ const Hero: React.FC = () => {
           }} />
         </div>
 
+        {/* Floating Code Snippets */}
+     
+
         {/* Floating Particles */}
         {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
@@ -76,6 +79,19 @@ const Hero: React.FC = () => {
         ))}
       </div>
 
+      {/* Animated Stats - Top Right */}
+     
+
+      {/* Live Activity Feed - Bottom Left */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 1.5 }}
+        className="absolute bottom-8 left-8 hidden xl:block"
+      >
+        
+      </motion.div>
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -94,10 +110,12 @@ const Hero: React.FC = () => {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 className="inline-flex items-center space-x-3 px-6 py-3 rounded-full bg-primary-500/10 backdrop-blur-sm border border-primary-500/20 shadow-lg"
               >
-                <div className="w-3 h-3 bg-primary-500 rounded-full animate-pulse shadow-lg shadow-primary-500/50" />
-                <span className="text-sm font-semibold text-primary-400 tracking-wide">
-                  Available for new projects
-                </span>
+                <motion.div
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="w-3 h-3 bg-primary-500 rounded-full shadow-lg shadow-primary-500/50"
+                />
+                
               </motion.div>
 
               {/* Enhanced Main Headline */}
@@ -106,7 +124,13 @@ const Hero: React.FC = () => {
                   <span className="block">
                     {displayText}
                     {!isComplete && (
-                      <span className="animate-blink text-primary-500 ml-1">|</span>
+                      <motion.span
+                        animate={{ opacity: [1, 0, 1] }}
+                        transition={{ duration: 1, repeat: Infinity }}
+                        className="text-primary-500 ml-1"
+                      >
+                        |
+                      </motion.span>
                     )}
                   </span>
                 </h1>
@@ -119,17 +143,26 @@ const Hero: React.FC = () => {
                 >
                   For Web2 & Web3 founders who need more than just a website — 
                   they need{' '}
-                  <span className="text-primary-500 font-bold bg-primary-500/10 px-2 py-1 rounded-md">
+                  <motion.span
+                    whileHover={{ scale: 1.05 }}
+                    className="text-primary-500 font-bold bg-primary-500/10 px-2 py-1 rounded-md cursor-default"
+                  >
                     trust
-                  </span>
+                  </motion.span>
                   ,{' '}
-                  <span className="text-accent-400 font-bold bg-accent-400/10 px-2 py-1 rounded-md">
+                  <motion.span
+                    whileHover={{ scale: 1.05 }}
+                    className="text-accent-400 font-bold bg-accent-400/10 px-2 py-1 rounded-md cursor-default"
+                  >
                     clarity
-                  </span>
+                  </motion.span>
                   , and{' '}
-                  <span className="text-primary-500 font-bold bg-primary-500/10 px-2 py-1 rounded-md">
+                  <motion.span
+                    whileHover={{ scale: 1.05 }}
+                    className="text-primary-500 font-bold bg-primary-500/10 px-2 py-1 rounded-md cursor-default"
+                  >
                     conversion
-                  </span>
+                  </motion.span>
                   .
                 </motion.p>
               </div>
@@ -147,7 +180,9 @@ const Hero: React.FC = () => {
                   whileTap={{ scale: 0.95 }}
                   className="group relative px-10 py-5 bg-gradient-to-r from-primary-500 to-primary-600 text-dark-600 rounded-xl font-bold text-lg shadow-2xl shadow-primary-500/30 hover:shadow-primary-500/50 transition-all duration-300 overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-primary-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-primary-400 to-primary-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
                   <span className="relative flex items-center justify-center space-x-3">
                     <Play className="w-6 h-6 group-hover:scale-110 transition-transform" />
                     <span>View Projects</span>
@@ -182,7 +217,8 @@ const Hero: React.FC = () => {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 3.2 + index * 0.1, duration: 0.4 }}
-                      className="px-4 py-2 bg-dark-500/50 backdrop-blur-sm border border-primary-500/20 text-primary-400 text-sm font-medium rounded-lg hover:border-primary-500/40 transition-colors duration-300"
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      className="px-4 py-2 bg-dark-500/50 backdrop-blur-sm border border-primary-500/20 text-primary-400 text-sm font-medium rounded-lg hover:border-primary-500/40 transition-all duration-300 cursor-default"
                     >
                       {tech}
                     </motion.span>
@@ -225,7 +261,11 @@ const Hero: React.FC = () => {
             >
               <div className="relative max-w-lg mx-auto">
                 {/* Enhanced Glassmorphism Frame */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-400/20 rounded-3xl backdrop-blur-sm border border-white/10 transform rotate-3 shadow-2xl"></div>
+                <motion.div
+                  animate={{ rotate: [3, -3, 3] }}
+                  transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+                  className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-400/20 rounded-3xl backdrop-blur-sm border border-white/10 shadow-2xl"
+                />
                 
                 {/* Main Visual Container */}
                 <div className="relative bg-gradient-to-br from-primary-500 to-accent-400 p-1 rounded-3xl shadow-2xl">
@@ -240,22 +280,28 @@ const Hero: React.FC = () => {
                         <span className="text-dark-300 text-xs ml-4">WisdomPro.tsx</span>
                       </div>
                       <div className="space-y-2 text-sm font-mono">
-                        <div className="text-primary-400">{'const '}<span className="text-accent-400">buildTrust</span>{' = () => {'}</div>
-                        <div className="text-dark-200 ml-4">{'return '}<span className="text-primary-400">'conversion-focused'</span>;</div>
-                        <div className="text-primary-400">{'}'}</div>
+                        <div className="text-primary-400">const <span className="text-accent-400">buildTrust</span> = () =&gt; &#123;</div>
+                        <div className="text-dark-200 ml-4">return <span className="text-primary-400">'conversion-focused'</span>;</div>
+                        <div className="text-primary-400">&#125;;</div>
                       </div>
                     </div>
 
                     {/* Metrics Display */}
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="bg-dark-600 rounded-lg p-3 border border-primary-500/20">
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        className="bg-dark-600 rounded-lg p-3 border border-primary-500/20 hover:border-primary-500/40 transition-colors duration-300"
+                      >
                         <div className="text-primary-400 text-xs font-medium">Conversion Rate</div>
                         <div className="text-white text-lg font-bold">+340%</div>
-                      </div>
-                      <div className="bg-dark-600 rounded-lg p-3 border border-accent-400/20">
+                      </motion.div>
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        className="bg-dark-600 rounded-lg p-3 border border-accent-400/20 hover:border-accent-400/40 transition-colors duration-300"
+                      >
                         <div className="text-accent-400 text-xs font-medium">Trust Score</div>
                         <div className="text-white text-lg font-bold">98%</div>
-                      </div>
+                      </motion.div>
                     </div>
                   </div>
                 </div>
@@ -265,7 +311,8 @@ const Hero: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1.5, duration: 0.6 }}
-                  className="absolute -top-6 -right-6 bg-dark-500/90 backdrop-blur-sm rounded-xl p-4 shadow-xl border border-primary-500/20"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="absolute -top-6 -right-6 bg-dark-500/90 backdrop-blur-sm rounded-xl p-4 shadow-xl border border-primary-500/20 hover:border-primary-500/40 transition-colors duration-300"
                 >
                   <div className="text-center">
                     <div className="text-2xl font-bold text-primary-500">50+</div>
@@ -277,7 +324,8 @@ const Hero: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1.8, duration: 0.6 }}
-                  className="absolute -bottom-6 -left-6 bg-dark-500/90 backdrop-blur-sm rounded-xl p-4 shadow-xl border border-accent-400/20"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="absolute -bottom-6 -left-6 bg-dark-500/90 backdrop-blur-sm rounded-xl p-4 shadow-xl border border-accent-400/20 hover:border-accent-400/40 transition-colors duration-300"
                 >
                   <div className="text-center">
                     <div className="text-2xl font-bold text-accent-400">2hrs</div>
@@ -289,7 +337,8 @@ const Hero: React.FC = () => {
                 <motion.div
                   animate={{ y: [-10, 10, -10], rotate: [0, 5, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                  className="absolute top-1/4 -left-8 w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-lg"
+                  whileHover={{ scale: 1.1 }}
+                  className="absolute top-1/4 -left-8 w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-lg cursor-pointer"
                 >
                   <Code className="w-6 h-6 text-white" />
                 </motion.div>
@@ -297,7 +346,8 @@ const Hero: React.FC = () => {
                 <motion.div
                   animate={{ y: [10, -10, 10], rotate: [0, -5, 0] }}
                   transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                  className="absolute bottom-1/4 -right-8 w-12 h-12 bg-gradient-to-br from-accent-400 to-accent-500 rounded-xl flex items-center justify-center shadow-lg"
+                  whileHover={{ scale: 1.1 }}
+                  className="absolute bottom-1/4 -right-8 w-12 h-12 bg-gradient-to-br from-accent-400 to-accent-500 rounded-xl flex items-center justify-center shadow-lg cursor-pointer"
                 >
                   <Shield className="w-6 h-6 text-dark-600" />
                 </motion.div>
@@ -318,10 +368,11 @@ const Hero: React.FC = () => {
           onClick={scrollToProjects}
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
+          whileHover={{ scale: 1.1 }}
           className="flex flex-col items-center space-y-2 text-dark-300 hover:text-primary-400 transition-colors duration-300 group"
         >
           <span className="text-sm font-medium">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-current rounded-full flex justify-center">
+          <div className="w-6 h-10 border-2 border-current rounded-full flex justify-center group-hover:border-primary-400 transition-colors duration-300">
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
