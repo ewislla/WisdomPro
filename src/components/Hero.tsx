@@ -232,8 +232,8 @@ const Hero: React.FC = () => {
                   </span>
                   <div className="flex items-center space-x-4">
                     {[
-                      { icon: Github, href: '#', label: 'GitHub', color: 'hover:text-white' },
-                      { icon: Twitter, href: '#', label: 'Twitter', color: 'hover:text-blue-400' },
+                      { icon: Github, href: 'https://github.com/ewislla', label: 'GitHub', color: 'hover:text-white' },
+                      { icon: Twitter, href: 'https://x.com/WisdomPr0', label: 'Twitter', color: 'hover:text-blue-400' },
                       { icon: Mail, href: '#contact', label: 'Email', color: 'hover:text-primary-400' }
                     ].map(({ icon: Icon, href, label, color }) => (
                       <motion.a

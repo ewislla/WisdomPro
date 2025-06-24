@@ -10,7 +10,7 @@ const About: React.FC = () => {
   });
 
   const skills = [
-    { name: 'React/Next.js', level: 95 },
+    { name: 'React js', level: 95 },
     { name: 'TypeScript', level: 90 },
     { name: 'Web3 Integration', level: 85 },
     { name: 'UI/UX Design', level: 88 },

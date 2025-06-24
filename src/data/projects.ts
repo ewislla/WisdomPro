@@ -6,13 +6,13 @@ export const projects: Project[] = [
     title: 'QuantumCat',
     description: 'A revolutionary Web3 meme coin platform that combines humor with serious blockchain technology. Features include staking, governance, and community-driven development.',
     tagline: 'Meme energy, serious execution',
-    image: 'https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '../assets/qcats.png',
     technologies: ['React', 'Web3.js', 'Solidity', 'Framer Motion', 'Tailwind CSS', 'MetaMask'],
-    liveUrl: 'https://quantumcat-demo.netlify.app',
+    liveUrl:'https://www.qcats.xyz/',
     codeUrl: 'https://github.com/wisdompro/quantumcat',
     featured: true,
     category: 'web3'
-  },
+   },
   {
     id: 'airflow-dashboard',
     title: 'AirFlow Dashboard',
