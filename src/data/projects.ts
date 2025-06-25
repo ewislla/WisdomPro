@@ -11,7 +11,7 @@ export const projects: Project[] = [
     liveUrl:'https://www.qcats.xyz/',
     codeUrl: 'https://github.com/ewislla/Qcat',
     featured: true,
-    category: 'Memecoin landing page'
+    category: 'web3'
    },
   {
     id: 'airflow-dashboard',
@@ -26,11 +26,11 @@ export const projects: Project[] = [
     category: 'dashboard'
   },
   {
-    id: 'estate-pro',
-    title: 'Estate Pro',
+    id: 'udhe-realty-limited ',
+    title: 'Udhe Realty Limited',
     description: 'Premium real estate platform focused on trust-building and conversion optimization. Features property showcases, virtual tours, and seamless client communication.',
     tagline: 'Trust-first property showcase',
-    image: 'https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '../assets/real-estate.png',  
     technologies: ['React', 'Next.js', 'Prisma', 'PostgreSQL', 'Stripe', 'AWS S3'],
     liveUrl: 'https://estate-pro-demo.netlify.app',
     codeUrl: 'https://github.com/wisdompro/estate-pro',
@@ -38,15 +38,15 @@ export const projects: Project[] = [
     category: 'web2'
   },
   {
-    id: 'crypto-tracker',
-    title: 'CryptoFlow Tracker',
-    description: 'Advanced cryptocurrency portfolio tracker with real-time price updates, profit/loss calculations, and detailed analytics dashboard.',
-    tagline: 'Track smart, invest smarter',
-    image: 'https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=800',
-    technologies: ['React', 'Redux', 'CoinGecko API', 'Chart.js', 'LocalStorage'],
-    liveUrl: 'https://cryptoflow-tracker.netlify.app',
-    codeUrl: 'https://github.com/wisdompro/crypto-tracker',
-    featured: false,
-    category: 'web3'
-  }
+  id: 'belleful-restaurant',
+  title: 'Belleful Restaurant',
+  description: 'Premium African restaurant platform featuring online reservations, menu showcase, cultural storytelling, and immersive dining experience booking with authentic brand identity and sophisticated user interface.',
+  tagline: 'Where Heritage Meets Culinary Excellence',
+  image: '../assets/belleful.png',
+  technologies: ['React js', 'Stripe', 'Socket.io', 'Cloudinary'],
+  liveUrl: 'https://bellefull-beta.vercel.app/',
+  codeUrl: 'https://github.com/wisdompro/belleful-restaurant',
+  featured: true,
+  category: 'restaurant'
+}
 ];

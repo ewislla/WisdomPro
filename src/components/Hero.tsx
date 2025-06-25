@@ -185,7 +185,7 @@ const Hero: React.FC = () => {
                   />
                   <span className="relative flex items-center justify-center space-x-3">
                     <Play className="w-6 h-6 group-hover:scale-110 transition-transform" />
-                    <span>View Projects</span>
+                    <span>View Project</span>
                   </span>
                 </motion.button>
 
@@ -211,7 +211,7 @@ const Hero: React.FC = () => {
               >
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-3">
-                  {['React.js', 'Next.js', 'Firebase', 'Solidity', 'Web3'].map((tech, index) => (
+                  {['React.js', 'Framer Motion', 'Firebase', 'Solidity', 'Tailwind'].map((tech, index) => (
                     <motion.span
                       key={tech}
                       initial={{ opacity: 0, scale: 0.8 }}
