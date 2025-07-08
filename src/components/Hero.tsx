@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Play, Github, Twitter, Mail, Code, Zap, Shield } from 'lucide-react';
+import {  Play, Github, Twitter, Mail, Code, Zap, Shield } from 'lucide-react';
 import { useTypewriter } from '../hooks/useTypewriter';
 
 const Hero: React.FC = () => {

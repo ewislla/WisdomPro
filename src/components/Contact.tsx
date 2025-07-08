@@ -59,40 +59,39 @@ const Contact: React.FC = () => {
   ];
 
   const budgetRanges = [
+    '$1K - $5K',
     '$5K - $10K',
-    '$10K - $25K',
-    '$25K - $50K',
+    '$10K - $50K',
     '$50K - $100K',
-    '$100K+'
   ];
 
   const contactMethods = [
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@wisdompro.dev',
-      href: 'mailto:hello@wisdompro.dev',
+      value: 'Wisdomudhedhe@gmail.com',
+      href: 'mailto:Wisdomudhedhe@gmail.com',
       color: 'from-blue-500 to-blue-600'
     },
     {
       icon: MessageCircle,
       label: 'Telegram',
-      value: '@wisdompro',
-      href: 'https://t.me/wisdompro',
+      value: '@wisdompr10',
+      href: 'https://t.me/wisdompr10',
       color: 'from-sky-500 to-sky-600'
     },
     {
       icon: Github,
       label: 'GitHub',
-      value: '/wisdompro',
-      href: 'https://github.com/wisdompro',
+      value: '/ewislla',
+      href: 'https://github.com/ewislla',
       color: 'from-gray-700 to-gray-800'
     },
     {
       icon: Twitter,
       label: 'Twitter',
-      value: '@wisdompro',
-      href: 'https://twitter.com/wisdompro',
+      value: '@wisdompr0',
+      href: 'https://twitter.com/wisdompr0',
       color: 'from-blue-400 to-blue-500'
     }
   ];
